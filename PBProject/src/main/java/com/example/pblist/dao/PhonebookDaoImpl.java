@@ -13,6 +13,7 @@ import java.util.List;
 import com.example.pblist.vo.PhonebookVo;
 
 public class PhonebookDaoImpl implements PhonebookDao {
+	
 	private Connection getConnection() throws SQLException {
 		
 		Connection conn = null;
@@ -144,7 +145,7 @@ public class PhonebookDaoImpl implements PhonebookDao {
 
             // 실행계획 PK , name , email , password
             String sql = "INSERT INTO phonebook" +
-            			"VALUES (id.NEXTVAL, ?, ?, ?)";
+            			"VALUES (seq_id_pk.NEXTVAL, ?, ?, ?)";
  
             // 파라미터 바인딩
             pstmt = conn.prepareStatement(sql);

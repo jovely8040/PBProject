@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +13,6 @@ import com.example.pblist.dao.PhonebookDao;
 import com.example.pblist.dao.PhonebookDaoImpl;
 import com.example.pblist.vo.PhonebookVo;
 
-//@WebServlet("/ps")
 public class PblistServlet extends HttpServlet {
 
 	@Override
@@ -25,7 +23,7 @@ public class PblistServlet extends HttpServlet {
 		
 		if ("form".equals(actionName)) {
 			RequestDispatcher rd = getServletContext()
-					.getRequestDispatcher("/pblist/form.jsp");
+					.getRequestDispatcher("/WEB-INF/views/form.jsp");
 			rd.forward(req, resp);
 		} else {
 			PhonebookDao dao = new PhonebookDaoImpl();
