@@ -157,17 +157,16 @@ public class PhonebookDaoImpl implements PhonebookDao {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {
-                if( conn != null ) {
-                    conn.close();
-                }
-                if( pstmt != null ) {
-                    pstmt.close();
-                }
-            }
-            catch(SQLException e) {
-                e.printStackTrace();
-            }
+	            try {
+	                if( conn != null ) {
+	                    conn.close();
+	                }
+	                if( pstmt != null ) {
+	                    pstmt.close();
+	                }
+	            } catch(SQLException e) {
+	                e.printStackTrace();
+	            }
         }
 
         return insertedCount;

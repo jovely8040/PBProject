@@ -1,7 +1,5 @@
 <%@page import="com.example.pblist.vo.PhonebookVo"%>
 <%@page import="java.util.List"%>
-<%@page import="com.example.pblist.dao.PhonebookDaoImpl"%>
-<%@page import="com.example.pblist.dao.PhonebookDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -28,7 +26,7 @@ if(holder == null) {
 	<h1>주소록 Servlet</h1>
 	<h3>목록</h3>
 
- 	<form action="<%= request.getContextPath() %>" method="POST" id="search">
+ 	<form action="ps" method="POST" id="search">
    		<!-- hidden은 사용자 입력은 아니지만 전송해야 할 데이터 -->
    		<label for="search">검색어</label>
 		<input type="hidden" value="search" name="a" />
@@ -57,7 +55,7 @@ if(holder == null) {
 					<td><%= vo.getTel() %></td>
 					<td>
 					<!-- 삭제 폼 -->
-						<form action="<%= request.getContextPath() %>/pblist/delete.jsp" method="POST">
+						<form action="<%= request.getContextPath() %>/ps" method="POST">
 							<input type="hidden" name="a" value="delete" />
 							<input type="hidden" name="id" value="<%= vo.getId() %>" />
 							<input type="submit" value="삭제" />
@@ -71,7 +69,7 @@ if(holder == null) {
  
 	 <!-- 작성 폼으로 이동 -->
 	<p>
-		<a href="<%= request.getContextPath() %>/pl?a=form">새 주소 추가</a>
+		<a href="<%= request.getContextPath() %>/ps?a=form">새 주소 추가</a>
 	</p>
  
 </body>

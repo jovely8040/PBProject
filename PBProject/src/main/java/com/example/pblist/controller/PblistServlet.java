@@ -14,7 +14,7 @@ import com.example.pblist.dao.PhonebookDao;
 import com.example.pblist.dao.PhonebookDaoImpl;
 import com.example.pblist.vo.PhonebookVo;
 
-@WebServlet("/pl")
+//@WebServlet("/ps")
 public class PblistServlet extends HttpServlet {
 
 	@Override
@@ -32,10 +32,9 @@ public class PblistServlet extends HttpServlet {
 			List<PhonebookVo> list = dao.getList();
 
 			req.setAttribute("list", list);
-			req.setAttribute("search", "");
 
 			RequestDispatcher rd = getServletContext()
-					.getRequestDispatcher("/pblist/index.jsp");
+					.getRequestDispatcher("/WEB-INF/views/home.jsp");
 			rd.forward(req, resp);
 		}
 	}
@@ -76,7 +75,7 @@ public class PblistServlet extends HttpServlet {
 			req.setAttribute("list", list);
 			
 			RequestDispatcher rd = getServletContext()
-					.getRequestDispatcher("/pblist/index.jsp");
+					.getRequestDispatcher("/WEB-INF/views/home.jsp");
 			rd.forward(req, resp);
 			
 		}else if ("delete".equals(actionName)) {
