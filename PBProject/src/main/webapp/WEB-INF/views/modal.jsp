@@ -4,14 +4,14 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Sign in</h5>
+				<h5 class="modal-title"><img src="<%= request.getContextPath() %>/images/signin.png" class="signinImg" /> Sign in</h5>
 				<button class="close" data-dismiss="modal" aria-label="close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<!-- form 컴포넌트 사용 -->
-				<form id="joinform" action="<%=request.getContextPath()%>/con" method="post" onsubmit="return checkForm()">
+				<form id="joinform" action="<%=request.getContextPath()%>/ps" method="post" onsubmit="return checkForm()">
 					<input type="hidden" value="add" name="a" />
 					<!-- form row -->
 					<div class="form-row row">

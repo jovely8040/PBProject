@@ -37,7 +37,7 @@ boolean checkform = true;
 					<label style="margin-right: 6px">search </label>
 					<input type="text" name="search" id="search" placeholder="검색어를 입력하세요">
 					<input type="hidden" name="a" value="search">
-					<button class="btn btn-info btn-sm" type="submit" style="margin: 0 0 4px 4px">search</button>
+					<button class="btn btn-info btn-sm" type="submit" style="margin: 0 0 4px 4px; background-color: orange; border-color: orange;">search</button>
 				</form>
 			</div>
 		</div>

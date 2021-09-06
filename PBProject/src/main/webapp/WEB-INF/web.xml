@@ -14,7 +14,8 @@
 		<servlet-name>HomeServlet</servlet-name>
 		<servlet-class>controller.HomeServlet</servlet-class>
 	</servlet>
-		<servlet>
+
+	<servlet>
 		<servlet-name>ContactServlet</servlet-name>
 		<servlet-class>controller.ContactServlet</servlet-class>
 	</servlet>
@@ -28,14 +29,13 @@
 	<!--filter mapping -->
 	<filter-mapping>
 		<filter-name>EncodingFilter</filter-name>
-		<!-- */ 모든 URL에 매핑-->
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-	<servlet-mapping>
+	<!-- servlet-mapping>
 		<servlet-name>HomeServlet</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping-->
 
 	<servlet-mapping>
 		<servlet-name>ContactServlet</servlet-name>

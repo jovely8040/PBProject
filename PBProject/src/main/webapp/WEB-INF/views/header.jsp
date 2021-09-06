@@ -4,6 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <title>주소록</title>
+<!-- Google Web Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 <!-- 부트스트랩 css 사용 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -45,12 +50,17 @@
 </script>
 
 <style>
+* {
+	font-family: 'Ubuntu', sans-serif;
+}
 h1, th, td {
 	text-align: center;
 }
 
 h1 {
 	padding: 30px 0px;
+	font-weight: 700;
+	color: #4b4b4b;
 }
 
 div.col, div.row {
@@ -80,10 +90,22 @@ div.showAll {
 .modal-footer {
 	margin-top: 20px;
 }
+
+.callImg {
+	max-width: 36px;
+	height: auto;
+	margin: 0 20px 6px 0;
+}
+
+.signinImg {
+	max-width: 36px;
+	height: auto;
+	margin-right: 10px;
+}
 </style>
 </head>
 <body>
-<h1>주소록 Servlet</h1>
+<h1><img src="<%= request.getContextPath() %>/images/call.png" class="callImg" />주소록 Servlet</h1>
 
 </body>
 </html>

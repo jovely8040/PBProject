@@ -17,7 +17,7 @@ public class PhonebookDAOImpl implements PhonebookDAO {
 		Connection conn = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String dburl = "jdbc:oracle:thin:@192.168.219.191:1521:xe";
+			String dburl = "jdbc:oracle:thin:@192.168.1.66:1521:xe";
 			conn = DriverManager.getConnection(dburl, "C##BITUSER", "1234");
 		} catch (ClassNotFoundException e) {
 			System.err.println("드라이버 실패");
